@@ -11,6 +11,9 @@ const transporter = nodemailer.createTransport({
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
   },
+  tls: {
+    rejectUnauthorized: false, // Add this line if you're using a self-signed certificate
+  },
 });
 
 export const sendEmail = async (to: string, subject: string, text: string) => {

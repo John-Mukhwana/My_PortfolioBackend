@@ -1,0 +1,16 @@
+
+
+GET http://localhost:8000/ok
+
+###
+POST http://localhost:8000/api/contact
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "phone": 1234567890,
+  "subject": "Test Message",
+  "message": "This is a test message."
+}
+
+
