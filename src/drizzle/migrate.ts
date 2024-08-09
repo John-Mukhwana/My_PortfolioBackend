@@ -14,7 +14,7 @@ async function migration() {
         await client.connect();
         
         // Perform the migrations
-        await migrate(db, { migrationsFolder: __dirname + "/drizzle/migrations" });
+        await migrate(db, { migrationsFolder: __dirname + "/migrations" });
         console.log("Migrations completed successfully.");
         
         // Close the database connection
