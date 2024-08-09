@@ -1,0 +1,22 @@
+{
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"build": "tsc",
+		 "start": "ts-node src/index.ts"
+	
+	},
+	"dependencies": {
+		"@hono/node-server": "^1.12.0",
+		"add": "^2.0.6",
+		"dotenv": "^16.4.5",
+		"hono": "^4.5.4",
+		"nodemailer": "^6.9.14",
+		"pnpm": "^9.7.0"
+	},
+	"devDependencies": {
+		"@types/nodemailer": "^6.4.15",
+		"ts-node": "^10.9.2",
+		"tsx": "^4.17.0",
+		"typescript": "^5.5.4"
+	}
+}
