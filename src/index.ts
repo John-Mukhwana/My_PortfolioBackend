@@ -6,16 +6,19 @@ import { contactRouter } from './Routes/contactRoutes';
 import { ratingRouter } from './Routes/ratingRoutes';
 import {cors as honorcors} from 'hono/cors'
 
+
 const app = new Hono();
 
 // Configure CORS
 app.use(
   '/api/*',
   honorcors({
-    origin: ['http://localhost:5173','http://localhost:5173','john-bradill-portfolio-black.vercel.app','https://john-bradill-portfol-git-ee6fbf-john-bradill-mukhwanas-projects.vercel.app/'],
+    origin: ['http://localhost:5173','https://john-bradill-portfolio-black.vercel.app','https://john-bradill-portfol-git-ee6fbf-john-bradill-mukhwanas-projects.vercel.app/'],
     allowMethods: ['GET', 'POST'],
+    allowHeaders: ['Content-Type', 'Authorization'],
   })
 );
+
 
 // Default route
 app.get('/ok', (c) => {
