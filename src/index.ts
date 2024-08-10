@@ -12,7 +12,7 @@ const app = new Hono();
 app.use(
   '/api/*',
   honorcors({
-    origin: ['http://localhost:5173','http://localhost:5173'],
+    origin: ['http://localhost:5173','http://localhost:5173','john-bradill-portfolio-black.vercel.app','https://john-bradill-portfol-git-ee6fbf-john-bradill-mukhwanas-projects.vercel.app/'],
     allowMethods: ['GET', 'POST'],
   })
 );
