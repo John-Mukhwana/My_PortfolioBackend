@@ -9,7 +9,7 @@ const cors_1 = require("hono/cors");
 const app = new hono_1.Hono();
 // Configure CORS
 app.use('/api/*', (0, cors_1.cors)({
-    origin: ['http://localhost:5173'],
+    origin: ['http://localhost:5173', 'http://localhost:5173'],
     allowMethods: ['GET', 'POST'],
 }));
 // Default route

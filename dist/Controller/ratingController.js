@@ -1,27 +1,28 @@
 "use strict";
+// // src/Controller/ratingController.ts
+// import { Context } from 'hono';
+// import { addRatingService, getRatingsService } from '../services/ratingService';
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getRatings = exports.addRating = void 0;
+exports.getRatingsController = exports.addRatingController = void 0;
 const ratingService_1 = require("../services/ratingService");
-const addRating = async (c) => {
+const addRatingController = async (c) => {
+    const { rating, comment } = await c.req.json();
     try {
-        const { rating, comment } = await c.req.json();
-        await (0, ratingService_1.addRatingService)(rating, comment);
+        await (0, ratingService_1.addRating)({ rating, comment });
         return c.json({ message: 'Rating submitted successfully' });
     }
     catch (error) {
-        console.error('Error in addRating controller:', error);
-        return c.json({ message: 'Failed to submit rating' }, 500);
+        return c.json({ error: error.message }, 500);
     }
 };
-exports.addRating = addRating;
-const getRatings = async (c) => {
+exports.addRatingController = addRatingController;
+const getRatingsController = async (c) => {
     try {
-        const ratings = await (0, ratingService_1.getRatingsService)();
+        const ratings = await (0, ratingService_1.getRatings)();
         return c.json(ratings);
     }
     catch (error) {
-        console.error('Error in getRatings controller:', error);
-        return c.json({ message: 'Failed to fetch ratings' }, 500);
+        return c.json({ error: error.message }, 500);
     }
 };
-exports.getRatings = getRatings;
+exports.getRatingsController = getRatingsController;
