@@ -9,8 +9,14 @@ const cors_1 = require("hono/cors");
 const app = new hono_1.Hono();
 // Configure CORS
 app.use('/api/*', (0, cors_1.cors)({
-    origin: ['http://localhost:5173', 'http://localhost:5173'],
+    origin: [
+        'https://john-bradill-portfolio-black.vercel.app/',
+        'john-bradill-portfolio-9h56qn958.vercel.app',
+        'http://localhost:5173',
+        'https://john-bradill-portfol-git-ee6fbf-john-bradill-mukhwanas-projects.vercel.app'
+    ],
     allowMethods: ['GET', 'POST'],
+    allowHeaders: ['Content-Type', 'Authorization'],
 }));
 // Default route
 app.get('/ok', (c) => {
@@ -24,6 +30,3 @@ console.log(`Server is running on port ${process.env.PORT}`);
     fetch: app.fetch,
     port: Number(process.env.PORT)
 });
-function cors(arg0) {
-    throw new Error('Function not implemented.');
-}
