@@ -14,7 +14,7 @@ app.use(
   '/api/*',
   cors({
     origin: [
-      'https://john-bradill-portfolio-black.vercel.app/',
+      'https://john-bradill-portfolio-black.vercel.app',
       'john-bradill-portfolio-9h56qn958.vercel.app',
       'http://localhost:5173',
       'https://john-bradill-portfol-git-ee6fbf-john-bradill-mukhwanas-projects.vercel.app'
