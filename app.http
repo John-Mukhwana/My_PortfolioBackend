@@ -1,16 +1,16 @@
 
 
-GET http://localhost:8000/ok
+GET http://localhost:8000/api/reviews
 
 ###
 POST http://localhost:8000/api/contact
 
 {
   "name": "John Doe",
-  "email": "john.doe@example.com",
-  "phone": 1234567890,
-  "subject": "Test Message",
-  "message": "This is a test message."
-}
+  "email": "jontexjesus@gmail.com",
+  "message": "This is a test message",
+  "phone": "08012345678",
+  "subject": "Test Subject"
 
+}
 
