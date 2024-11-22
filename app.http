@@ -14,3 +14,11 @@ POST http://localhost:8000/api/contact
 
 }
 
+###
+POST  http://localhost:8000/api/send-rating
+
+{
+  "id":4,
+  "rating":4,
+  "comment":"cool"
+}

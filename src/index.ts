@@ -17,6 +17,7 @@ app.use(
       'https://john-bradill-portfolio-black.vercel.app',
       'john-bradill-portfolio-9h56qn958.vercel.app',
       'http://localhost:5173',
+      'https://john-mukhwana-portfolio.netlify.app/',
       'https://john-bradill-portfol-git-ee6fbf-john-bradill-mukhwanas-projects.vercel.app'
     ],
     allowMethods: ['GET', 'POST'],
